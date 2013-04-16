@@ -47,6 +47,9 @@ Please read [Guard doc](https://github.com/guard/guard#readme) for more info abo
                                     # LESS parser, used when resolving `@import`
                                     # statements
                                     # default: [] (see below)
+
+:compress => [true|false]           # compress the css (remove whitespace)
+                                    # default: false
 ```
 
 ### Output option
