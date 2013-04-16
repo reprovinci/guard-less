@@ -43,6 +43,10 @@ Please read [Guard doc](https://github.com/guard/guard#readme) for more info abo
                                     # as their corresponding .less file
                                     # default: nil
 
+:output_file => ['css/output.css']  # which file to write to
+                                    # useful for compiling .css to .min.css
+                                    # default: nil
+
 :import_paths => ['lib/styles']     # an array of additional load paths to pass to the
                                     # LESS parser, used when resolving `@import`
                                     # statements
