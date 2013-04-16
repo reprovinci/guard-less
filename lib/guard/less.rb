@@ -15,6 +15,7 @@ module Guard
         :all_after_change => true,
         :all_on_start => true,
         :output => nil,
+        :output_file => nil,
         :import_paths => [],
         :compress => false
       }
@@ -56,7 +57,7 @@ module Guard
           basename = File.basename(lessfile)
           next if basename[0,1] == "_"
 
-          cssfile = File.join(destination, basename.gsub(/\.less$/, '.css'))
+          cssfile = options[:output_file] || (File.join(destination, basename.gsub(/\.less$/, '.css')))
 
           # Just in case
           if cssfile == lessfile
